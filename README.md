@@ -7,6 +7,25 @@ This code constitutes a generalization of our repository https://github.com/reti
 
 Please visit https://carlagear.retis.santannapisa.it/#research for a list of our papers concerning real-world adversarial attacks.
 
+If our work was useful for your research, please consider citing it!
+```
+@ARTICLE{2022arXiv220604365N,
+       author = {{Nesti}, Federico and {Rossolini}, Giulio and {D'Amico}, Gianluca and {Biondi}, Alessandro and {Buttazzo}, Giorgio},
+        title = "{CARLA-GeAR: a Dataset Generator for a Systematic Evaluation of Adversarial Robustness of Vision Models}",
+      journal = {arXiv e-prints},
+     keywords = {Computer Science - Computer Vision and Pattern Recognition},
+         year = 2022,
+        month = jun,
+          eid = {arXiv:2206.04365},
+        pages = {arXiv:2206.04365},
+archivePrefix = {arXiv},
+       eprint = {2206.04365},
+ primaryClass = {cs.CV},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2022arXiv220604365N%7D,
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+```
+
 ### Installation
 We tested the code with Python 3.6.9. It is strongly suggested to use a virtual environment.
 Install PyTorch 1.10.1 with CUDA 11.1 support (https://pytorch.org/get-started/previous-versions/ - any CUDA version should work).
@@ -31,11 +50,13 @@ The models used for the generation of the patches included in these datasets are
 | ------------- | ------------- |
 | DDRNet23Slim  | Content Cell  |
 | BiseNetX39  | Content Cell  |
-| Faster R-CNN  | Content Cell  |
-| RetinaNet  | Content Cell  |
-| GLPDepth  | Content Cell  |
-| AdaBins  | Content Cell  |
-| Stereo R-CNN  | Content Cell  |
+| Faster R-CNN  | [torchvision zoo](https://pytorch.org/vision/stable/models.html#object-detection-instance-segmentation-and-person-keypoint-detection)  |
+| RetinaNet  | [torchvision zoo](https://pytorch.org/vision/stable/models.html#object-detection-instance-segmentation-and-person-keypoint-detection)  |
+| GLPDepth  | https://github.com/vinvino02/GLPDepth  |
+| AdaBins  | https://github.com/shariqfarooq123/AdaBins  |
+| Stereo R-CNN*  | https://github.com/HKUST-Aerial-Robotics/Stereo-RCNN/tree/1.0  |
+
+\* Differently from the other models that only require the weights to be downloaded, Stereo R-CNN requires the entire repo to be cloned and installed in `pt3dod/models`. Please follow the repo instructions, also for the installation of the evaluation script.
 
 ### Running the code
 To evaluate the performance of a network, it is sufficient to run 
@@ -45,7 +66,11 @@ The `.yml` config file (of which we shared a template for each network used) is 
 
 
 ### Extending attacks and models
-To extend the code to user-defined, it is sufficient
+You can extend the code to include:
+* user-defined models: it is sufficient to copy the model .py file in the corresponding task-specific model library (e.g., for a segmentation CNN, in `ptsemgseg/models`), add the initialization line in the `models/__init__.py`, and add the pytorch weights loading function in `utils.py`. All the other network-specific configuration parameters are in the config file.
+* user-defined attacks: it is sufficient to define a new loss in the corresponding attack class file (`attacks/` folder).
+
+If you have any questions feel free to contact us!
 
 
 
