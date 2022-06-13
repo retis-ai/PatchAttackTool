@@ -48,8 +48,8 @@ This is because the scene-specific attack requires exact camera-to-billboard rot
 The models used for the generation of the patches included in these datasets are in the following table:
 | Network  | Link to repo |
 | ------------- | ------------- |
-| DDRNet23Slim  | Content Cell  |
-| BiseNetX39  | Content Cell  |
+| DDRNet23Slim  | https://github.com/ydhongHIT/DDRNet  |
+| BiseNetX39  | https://github.com/ycszen/TorchSeg  |
 | Faster R-CNN  | [torchvision zoo](https://pytorch.org/vision/stable/models.html#object-detection-instance-segmentation-and-person-keypoint-detection)  |
 | RetinaNet  | [torchvision zoo](https://pytorch.org/vision/stable/models.html#object-detection-instance-segmentation-and-person-keypoint-detection)  |
 | GLPDepth  | https://github.com/vinvino02/GLPDepth  |
