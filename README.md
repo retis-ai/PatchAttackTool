@@ -1,5 +1,5 @@
 # PatchAttackTool
-Welcome to our repo for the code for attacks against autonomous driving vision tasks. This code was used to craft the adversarial patches used in our paper "[CARLA-GeAR: a Dataset Generator for a Systematic Evaluation of Adversarial Robustness of Vision Models](https://carlagear.retis.santannapisa.it/)". 
+Welcome to our repo for the code for attacks against autonomous driving vision tasks. This code was used to craft the adversarial patches used in our papers "[CARLA-GeAR: a Dataset Generator for a Systematic Evaluation of Adversarial Robustness of Vision Models](https://carlagear.retis.santannapisa.it/)" [1] and "[On the Real-World Adversarial Robustness of Real-Time Semantic Segmentation Models for Autonomous Driving](https://arxiv.org/abs/2201.01850)" [2]. 
 
 This code constitutes a generalization of our repository https://github.com/retis-ai/SemSegAdvPatch to extend [scene-specific attacks](https://openaccess.thecvf.com/content/WACV2022/html/Nesti_Evaluating_the_Robustness_of_Semantic_Segmentation_for_Autonomous_Driving_Against_WACV_2022_paper.html) to tasks other than **semantic segmentation**, namely **2d object detection**, **monocular depth estimation** and **stereo 3d object detection**.
 
@@ -25,6 +25,25 @@ archivePrefix = {arXiv},
       adsnote = {Provided by the SAO/NASA Astrophysics Data System}
 }
 ```
+```
+@ARTICLE{2022arXiv220101850R,
+    author = {{Rossolini}, Giulio and {Nesti}, Federico and {D'Amico}, Gianluca and {Nair}, Saasha and {Biondi}, Alessandro and {Buttazzo}, Giorgio},
+    title = "{On the Real-World Adversarial Robustness of Real-Time Semantic Segmentation Models for Autonomous Driving}",
+    journal = {arXiv e-prints},
+    keywords = {Computer Science - Computer Vision and Pattern Recognition, Computer Science - Artificial Intelligence},
+    year = 2022,
+    month = jan,
+    eid = {arXiv:2201.01850},
+    pages = {arXiv:2201.01850},
+    archivePrefix = {arXiv},
+    eprint = {2201.01850},
+    primaryClass = {cs.CV},
+    adsurl = {https://ui.adsabs.harvard.edu/abs/2022arXiv220101850R},
+    adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+```
+
+
 
 ### Installation
 We tested the code with Python 3.6.9. It is strongly suggested to use a virtual environment.
